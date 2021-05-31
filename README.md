@@ -36,11 +36,27 @@ This function is almost the same as the function ```segment(argv)```. The only d
 - ```return``` It returns a Rcpp::NumericMatrix from s to e. Its upper triangular part is the original HiC data but the lower triangular part is constructed from the detected change-points and their hierarchical orders. It also generates an output file containing change-point locations, orders and p-values.
 
 For example:
+
+If the HiC data is "samp_nested.txt" (https://github.com/YingruWuGit/HiCKey/tree/master/examples), then "arguments_HiCKey.txt" can be
 ```
-X = segHeatMap("C:/Users/Yingru/Source/Repos/HiCKey/examples/arguments_HiCKey.txt", 0, 301)
+C:/Users/Yingru/Source/Repos/HiCKey/examples/samp_nested.txt
+C:/Users/Yingru/Source/Repos/HiCKey/examples/BrownianP.txt
+m
+3
+0.05
+0.00005
+```
+Input the following and leave s and e as default
+```
+X = segHeatMap("C:/Users/Yingru/Source/Repos/HiCKey/examples/arguments_HiCKey.txt")
 heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
 ```
-
-The heatmap is like:
+The heatmap is
 
 ![alt text](https://github.com/YingruWuGit/HiCKeyR/blob/main/sample_heatmap.png)
+
+If the HiC data is "chr21_50kb.RAWobserved" (https://github.com/YingruWuGit/HiCKey/tree/master/examples) with resolution 50k, then input something like:
+```
+X = segHeatMap("C:/Users/Yingru/Source/Repos/HiCKey/examples/arguments_HiCKey.txt", 0, 15050000)
+heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
+```
