@@ -37,7 +37,7 @@ This function is almost the same as the function ```segment(argv)```. The only d
 
 For example:
 
-If the HiC data is "samp_nested.txt" (https://github.com/YingruWuGit/HiCKey/tree/master/examples), then "arguments_HiCKey.txt" can be
+If the HiC data is "samp_nested.txt" (https://github.com/YingruWuGit/HiCKey/tree/master/examples), then the "arguments_HiCKey.txt" can be
 ```
 C:/Users/Yingru/Source/Repos/HiCKey/examples/samp_nested.txt
 C:/Users/Yingru/Source/Repos/HiCKey/examples/BrownianP.txt
