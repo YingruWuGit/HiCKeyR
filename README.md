@@ -12,6 +12,7 @@ library(devtools)
 Then, install the HiCKeyR package:
 ```
 install_github("https://github.com/YingruWuGit/HiCKeyR.git")
+library(HiCKeyR)
 ```
 
 # segment(argv)
