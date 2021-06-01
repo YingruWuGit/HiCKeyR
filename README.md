@@ -1,6 +1,6 @@
 # HiCKeyR
 
-R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```.
+R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works well in Windows but there are problems in maxOS. I'm investigating into it and try to provide a compatible version.
 
 # Install
 
