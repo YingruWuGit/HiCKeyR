@@ -4,8 +4,9 @@ R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(
 
 # Install
 
-First, user needs the devtools package:
+First, user needs Rcpp and devtools:
 ```
+install.packages("Rcpp")
 install.packages("devtools")
 library(devtools)
 ```
