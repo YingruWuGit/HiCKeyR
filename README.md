@@ -1,6 +1,6 @@
 # HiCKeyR
 
-R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works well in Windows but there are problems in MacOS. I'm investigating into it and try to provide a compatible version.
+R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works well in Windows but there are some problems in MacOS. I'm investigating into it and try to provide a compatible version.
 
 # Install
 
@@ -33,7 +33,7 @@ This function is almost the same as the function ```segment(argv)```. The only d
 
 - ```argv``` Same as above.
 - ```s``` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
-- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC matrix. Note that the last index of the submatrix is actually end - 1 following C++ convention.
+- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC matrix. Note that the last index of the submatrix is actually e-1 following C++ convention.
 - ```return``` It returns a Rcpp::NumericMatrix from s to e. Its upper triangular part is the original HiC data but the lower triangular part is constructed from the detected change-points and their hierarchical orders. It also generates an output file containing change-point locations, orders and p-values.
 
 For example:
