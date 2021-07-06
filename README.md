@@ -1,6 +1,6 @@
 # HiCKeyR
 
-R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works well in Windows but there are problems in MacOS, as some file reading functions do not work in MacOS's default compiler clang. I'm investigating into it and try to provide a compatible version.
+R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works in Windows and MacOS.
 
 # Install
 
