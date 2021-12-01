@@ -1,0 +1,6 @@
+C:/Users/Andrew/Documents/GitHub/HiCKey/examples/samp_nested.txt
+C:/Users/Andrew/Documents/GitHub/HiCKey/BrownianP.txt
+m
+3
+0.05
+0.00005
