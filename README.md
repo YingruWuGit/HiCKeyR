@@ -40,8 +40,8 @@ For example:
 
 If the HiC data is "samp_nested.txt" (https://github.com/YingruWuGit/HiCKey/tree/master/examples), then the "arguments_HiCKey.txt" can be
 ```
-C:/Users/Yingru/Source/Repos/HiCKey/examples/samp_nested.txt
-C:/Users/Yingru/Source/Repos/HiCKey/examples/BrownianP.txt
+C:/Users/Andrew/Documents/GitHub/HiCKey/examples/samp_nested.txt
+C:/Users/Andrew/Documents/GitHub/HiCKey/BrownianP.txt
 m
 3
 0.05
