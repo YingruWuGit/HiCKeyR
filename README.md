@@ -24,7 +24,7 @@ This function is exactly the same as executing the C++ program. It does not retu
 
 For example:
 ```
-segment("C:/Users/Yingru/Source/Repos/HiCKey/examples/arguments_HiCKey.txt")
+segment("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 ```
 
 # segHeatMap(argv, s, e)
@@ -49,7 +49,7 @@ m
 ```
 Input the following and leave s and e as default
 ```
-X = segHeatMap("C:/Users/Yingru/Source/Repos/HiCKey/examples/arguments_HiCKey.txt")
+X = segHeatMap("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
 ```
 The heatmap is
