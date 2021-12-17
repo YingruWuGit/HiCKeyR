@@ -1,6 +1,6 @@
 # HiCKeyR
 
-R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```. It works in Windows and MacOS.
+R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```.
 
 # Install
 
@@ -18,7 +18,7 @@ library(HiCKeyR)
 
 # segment(argv)
 
-This function is exactly the same as executing the C++ program. It does not return a value, but generates an output file containing change-point locations, orders and p-values. For example, if the HiC data file has name "xxxx", then the output file is named as "xxxx_output" in the same directory.
+This function is exactly the same as executing the C++ program. It does not return a value, but generates an output file containing boundaries (change-points), hierarchical orders and p-values. If the HiC data file has name "xxxx", then the output file is named as "xxxx_output" in the same directory.
 
 - ```argv``` This parameter is the full path and name of a txt file "arguments_HiCKey.txt" containing all the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt".
 
