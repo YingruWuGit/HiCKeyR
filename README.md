@@ -24,7 +24,9 @@ This function is exactly the same as executing the C++ program. It does not retu
 
 To use it:
 
-Download "BrownianP.txt" from 
+Download "BrownianP.txt" from (https://github.com/YingruWuGit/HiCKey/blob/master/BrownianP.txt)
+
+Set the arguments in "arguments_HiCKey.txt", then input:
 
 ```
 segment("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
