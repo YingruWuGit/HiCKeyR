@@ -38,8 +38,8 @@ This function is almost the same as ```segment(argv)```. The only difference is 
 
 - ```argv``` Same as above.
 - ```s``` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
-- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually e-1 following C++ convention.
-- ```return``` It returns a Rcpp::NumericMatrix from s to e. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
+- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually ```e-1``` following C++ convention.
+- ```return``` It returns a Rcpp::NumericMatrix from ```s``` to ```e```. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
 
 To use it:
 
