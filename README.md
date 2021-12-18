@@ -1,6 +1,6 @@
 # HiCKeyR
 
-R package of HiCKey. It has two functions ```segment(argv)``` and ```segHeatMap(argv, s, e)```.
+R package of HiCKey. It has two functions `segment(argv)` and `segHeatMap(argv, s, e)`.
 
 # Install
 
@@ -20,7 +20,7 @@ library(HiCKeyR)
 
 This function is exactly the same as executing the C++ program. It does not return a value, but generates an output file containing boundaries (change-points), hierarchical orders and p-values. If the HiC data file has name "xxxx", then the output file is named as "xxxx_output" in the same directory.
 
-- ```argv``` This parameter is the full path and name of "arguments_HiCKey.txt" containing the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt".
+- `argv` This parameter is the full path and name of "arguments_HiCKey.txt" containing the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt".
 
 To use it:
 
@@ -34,12 +34,12 @@ segment("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 
 # segHeatMap(argv, s, e)
 
-This function is almost the same as ```segment(argv)```. The only difference is that it returns a submatrix of the HiC data, in which the upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries and their hierarchical orders. User can draw a heatmap by the returned submatrix.
+This function is almost the same as `segment(argv)`. The only difference is that it returns a submatrix of the HiC data, in which the upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries and their hierarchical orders. User can draw a heatmap by the returned submatrix.
 
-- ```argv``` Same as above.
-- ```s``` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
-- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually ```e-1``` following C++ convention.
-- ```return``` It returns a Rcpp::NumericMatrix from ```s``` to ```e```. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
+- `argv` Same as above.
+- `s` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
+- `e` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually `e-1` following C++ convention.
+- `return` It returns a Rcpp::NumericMatrix from `s` to `e`. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
 
 To use it:
 
@@ -54,7 +54,7 @@ m
 0.05
 0.00005
 ```
-Input the following commands in R, leaving ```s``` and ```e``` as default
+Input the following commands in R, leaving `s` and `e` as default
 ```
 X = segHeatMap("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
