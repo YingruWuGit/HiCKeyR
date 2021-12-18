@@ -34,14 +34,16 @@ segment("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 
 # segHeatMap(argv, s, e)
 
-This function is almost the same as the function ```segment(argv)```. The only difference is that it returns a submatrix of the HiC data in which the upper triangular part is the original HiC data but the lower triangular part is constructed from the detected change-points and their hierarchical orders. User can draw a heatmap by the return matrix.
+This function is almost the same as ```segment(argv)```. The only difference is that it returns a submatrix of the HiC data, in which the upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries and their hierarchical orders. User can draw a heatmap by the returned submatrix.
 
 - ```argv``` Same as above.
 - ```s``` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
-- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC matrix. Note that the last index of the submatrix is actually e-1 following C++ convention.
-- ```return``` It returns a Rcpp::NumericMatrix from s to e. Its upper triangular part is the original HiC data but the lower triangular part is constructed from the detected change-points and their hierarchical orders. It also generates an output file containing change-point locations, orders and p-values.
+- ```e``` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually e-1 following C++ convention.
+- ```return``` It returns a Rcpp::NumericMatrix from s to e. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
 
-For example:
+To use it:
+
+Download "BrownianP.txt" from (https://github.com/YingruWuGit/HiCKey/blob/master/BrownianP.txt)
 
 If the HiC data is "samp_nested.txt" (https://github.com/YingruWuGit/HiCKey/tree/master/examples), then the "arguments_HiCKey.txt" can be
 ```
@@ -52,7 +54,7 @@ m
 0.05
 0.00005
 ```
-Input the following and leave s and e as default
+Input the following commands in R, leaving s and e as default
 ```
 X = segHeatMap("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
