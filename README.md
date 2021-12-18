@@ -54,7 +54,7 @@ m
 0.05
 0.00005
 ```
-Input the following commands in R, leaving s and e as default
+Input the following commands in R, leaving ```s``` and ```e``` as default
 ```
 X = segHeatMap("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
