@@ -18,7 +18,7 @@ library(HiCKeyR)
 
 # segment(argv)
 
-This function is exactly the same as executing the C++ program. It does not return a value, but generates an output file containing boundaries (change-points), hierarchical orders and p-values. If the HiC data file has name "xxxx", then the output file is named as "xxxx_output" in the same directory.
+This function is exactly the same as executing the C++ program. It does not return a value, but generates an output files containing boundaries (change-points), hierarchical orders and p-values. If the HiC data file has name "xxxx", then the output files are named as "xxxx_output.txt" and "xxxx_TADs.bed" in the same directory.
 
 - `argv` This parameter is the full path and name of "arguments_HiCKey.txt" containing the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt".
 
@@ -39,7 +39,7 @@ This function is almost the same as `segment(argv)`. The only difference is that
 - `argv` Same as above.
 - `s` Start index of the submatrix. Its default value is 0. Note that the index is 0 based.
 - `e` End index of the submatrix. Its default value is -1, which means the end of the whole HiC data. Note that the last index of the submatrix is actually `e-1` following C++ convention.
-- `return` It returns a Rcpp::NumericMatrix from `s` to `e`. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates an output file containing boundaries, hierarchical orders and p-values.
+- `return` It returns a Rcpp::NumericMatrix from `s` to `e`. Its upper triangular part is the original HiC data but the lower triangular part is blockwise constant that constructed from the detected boundaries. It also generates output files containing boundaries, hierarchical orders and p-values.
 
 To use it:
 
