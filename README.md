@@ -20,14 +20,13 @@ library(HiCKeyR)
 
 This function is exactly the same as executing the C++ program. It does not return a value, but generates output files containing boundaries (change-points), hierarchical orders and p-values. If the HiC data file has name "xxxx", then the output files are named as "xxxx_output.txt" and "xxxx_TADs.bed" in the same directory.
 
-- `argv` This parameter is the full path and name of "arguments_HiCKey.txt" containing the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt".
+- `argv` This parameter is the full path and name of "arguments_HiCKey.txt" containing the arguments setting. Please refer to the HiCKey repository (https://github.com/YingruWuGit/HiCKey) for the arguments setting in "arguments_HiCKey.txt" and the details of output files.
 
 To use it:
 
 Download "BrownianP.txt" from (https://github.com/YingruWuGit/HiCKey/blob/master/BrownianP.txt)
 
 Set the arguments in "arguments_HiCKey.txt", then input:
-
 ```
 segment("C:/Users/Andrew/Documents/GitHub/HiCKeyR/arguments_HiCKey.txt")
 ```
