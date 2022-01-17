@@ -65,5 +65,5 @@ The heatmap is
 If HiC data is "chr21_50kb.RAWobserved" (https://github.com/YingruWuGit/HiCKey/tree/master/examples) with resolution 50k, then input something like:
 ```
 X = segHeatMap("C:/Users/Andrew/Documents/GitHub/HiCKey/arguments_HiCKey.txt", 0, 15050000)
-heatmap(X, scale = "none", Rowv = NA, Colv = NA, col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
+heatmap(X, Rowv = NA, Colv = NA, revC = TRUE, scale = "none", col = gray.colors(50, start = 1, end = 0, gamma = 0.15))
 ```
